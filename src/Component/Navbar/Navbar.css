@@ -1,0 +1,97 @@
+/* Sticky Navbar */
+.navbar {
+  background-color: #1a365d;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a:hover {
+  color: #93c5fd;
+}
+
+/* Dropdown Parent */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle .arrow {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 190px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin-top: 0.5rem;
+  border-top: 3px solid #2563eb;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  color: #1e293b;
+  padding: 0.6rem 1rem;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f5f9;
+  color: #1d4ed8;
+}
+
+/* Display rules (Triggered by hover or state class) */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown:hover .dropdown-toggle .arrow,
+.dropdown.open .dropdown-toggle .arrow {
+  transform: rotate(180deg);
+}
+
+/* Prevent sticky navbar from cutting off headings on jump */
+:target {
+  scroll-margin-top: 80px;
+}

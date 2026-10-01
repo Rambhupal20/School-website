@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+/* Card Container */
+.title-card {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Brand wrapper (Logo + Text) */
+.title-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* School Logo */
+.title-logo {
+  height: 60px;          /* Adjusted for better visibility */
+  width: 60px;           /* Square ratio works best for circular crests/logos */
+  object-fit: cover;
+  border-radius: 50%;    /* Perfect circle */
+  border: 2px solid #1a365d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease;
+}
+
+.title-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Text Container */
+.title-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* School Name Heading */
+.title-heading {
+  font-family: 'Cinzel', serif; /* Classic academic / institutional look */
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a365d;              /* Deep navy blue */
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+/* Optional Subtitle / Motto */
+.title-subheading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;              /* Muted slate */
+  margin: 0.25rem 0 0 0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .title-card {
+    padding: 0.75rem 1rem;
+  }
+
+  .title-logo {
+    height: 48px;
+    width: 48px;
+  }
+
+  .title-heading {
+    font-size: 1.3rem;
+  }
+
+  .title-subheading {
+    font-size: 0.75rem;
+  }
+}

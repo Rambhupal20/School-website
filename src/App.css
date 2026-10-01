@@ -1,0 +1,19 @@
+/* src/App.css */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f1f5f9; /* Soft cool slate base */
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(26, 54, 93, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 40%, rgba(37, 99, 235, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 15% 80%, rgba(217, 119, 6, 0.05) 0%, transparent 40%),
+    radial-gradient(#94a3b8 0.75px, transparent 0.75px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
